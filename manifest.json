@@ -1,0 +1,32 @@
+{
+    "name": "Cybind Social Crawler",
+    "description": "Take current page, find links to share, crawl them and post to buffer",
+    "version": "0.1",
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["app.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_title": "Crawl this page",
+        "default_icon": {
+            "19": "logo_icon_19.png",
+            "38": "logo_icon_38.png"
+        } //"icon.png" //,
+        //"default_popup": "popup.html"
+    },
+    "manifest_version": 2,
+    "content_scripts": [
+    {
+        "matches": ["http://*/*"],
+        "css": ["main.css"]
+    }],
+    "icons": {
+        "16": "logo_icon_small.png",
+        "48": "logo_icon_large.png",
+        "128": "logo_icon_128.png"
+    }
+}
