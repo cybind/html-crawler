@@ -1,22 +1,18 @@
 var endpoint = 'http://localhost:3000/auth';
+// var endpoint = 'http://localhost:3000/process';
 
-addHighlightButton();
+highlightLinks();
 addCrawlButton();
 
-function addHighlightButton() {
-    $('body').append('<button class="add-highlight-button">Highilight</button>');
+function highlightLinks() {
 
-    $('.add-highlight-button').click(function() {
-        
-        $('a').addClass('crawler-link');
-        $('a').click(function() {
-            if ($(this).hasClass('selected'))
-                $(this).removeClass('selected');
-            else
-                $(this).addClass('selected');
-            return false;
-        });
-
+    $('a').addClass('crawler-link');
+    $('a').click(function() {
+        if ($(this).hasClass('selected'))
+            $(this).removeClass('selected');
+        else
+            $(this).addClass('selected');
+        return false;
     });
 
 }
